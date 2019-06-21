@@ -247,7 +247,7 @@ void ModeRTL::loiterathome_run()
             }
         } else {
             // we have loitered long enough
-            _state_complete = true;
+            _state_complete = false;
         }
     }
 }
