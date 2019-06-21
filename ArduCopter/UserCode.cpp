@@ -4,6 +4,19 @@
 void Copter::userhook_init()
 {
     // put your initialisation code here
+     static bool in_arm_motors = false;
+
+
+
+    // exit immediately if already in this function
+
+    if (in_arm_motors) {
+
+        return false;
+
+    }
+
+    in_arm_motors = true;
     // this will be called once at start-up
 }
 #endif
