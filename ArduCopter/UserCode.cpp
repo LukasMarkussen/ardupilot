@@ -1,4 +1,7 @@
 #include "Copter.h"
+#include <dos.h>
+#include <stdio.h>
+#include <conio.h>
 
 #ifdef USERHOOK_INIT
 void Copter::userhook_init()
@@ -15,7 +18,7 @@ void Copter::userhook_init()
         return false;
 
     }
-
+    sleep(5);
     in_arm_motors = true;
     // this will be called once at start-up
 }
